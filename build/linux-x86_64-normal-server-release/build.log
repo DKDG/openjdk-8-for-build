@@ -1,0 +1,38 @@
+## Starting langtools
+Compiling 2 files for BUILD_TOOLS
+Compiling 31 properties into resource bundles
+Compiling 777 files for BUILD_BOOTSTRAP_LANGTOOLS
+Creating langtools/dist/bootstrap/lib/javac.jar
+Updating langtools/dist/lib/src.zip
+Compiling 780 files for BUILD_FULL_JAVAC
+Creating langtools/dist/lib/classes.jar
+## Finished langtools (build time 00:00:16)
+
+## Starting hotspot
+make[2]: warning: -jN forced in submake: disabling jobserver mode.
+INFO: ENABLE_FULL_DEBUG_SYMBOLS=1
+INFO: ALT_OBJCOPY=/usr/bin/objcopy
+INFO: /usr/bin/objcopy cmd found so will create .debuginfo files.
+INFO: STRIP_POLICY=min_strip
+INFO: ZIP_DEBUGINFO_FILES=1
+INFO: ENABLE_FULL_DEBUG_SYMBOLS=1
+INFO: ALT_OBJCOPY=/usr/bin/objcopy
+INFO: /usr/bin/objcopy cmd found so will create .debuginfo files.
+INFO: STRIP_POLICY=min_strip
+INFO: ZIP_DEBUGINFO_FILES=1
+INFO: ENABLE_FULL_DEBUG_SYMBOLS=1
+INFO: ALT_OBJCOPY=/usr/bin/objcopy
+INFO: /usr/bin/objcopy cmd found so will create .debuginfo files.
+INFO: STRIP_POLICY=min_strip
+INFO: ZIP_DEBUGINFO_FILES=1
+*** This OS is not supported: Linux dgserver 4.15.0-74-generic #83~16.04.1-Ubuntu SMP Wed Dec 18 04:56:23 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+/home/daegyu/Downloads/dg-openjdk-8/hotspot/make/linux/Makefile:234: recipe for target 'check_os_version' failed
+make[5]: *** [check_os_version] Error 1
+/home/daegyu/Downloads/dg-openjdk-8/hotspot/make/linux/Makefile:255: recipe for target 'linux_amd64_compiler2/debug' failed
+make[4]: *** [linux_amd64_compiler2/debug] Error 2
+Makefile:216: recipe for target 'generic_build2' failed
+make[3]: *** [generic_build2] Error 2
+Makefile:167: recipe for target 'product' failed
+make[2]: *** [product] Error 2
+make[1]: *** [/home/daegyu/Downloads/dg-openjdk-8/build/linux-x86_64-normal-server-release/hotspot/_hotspot.timestamp] Error 2
+HotspotWrapper.gmk:44: recipe for target '/home/daegyu/Downloads/dg-openjdk-8/build/linux-x86_64-normal-server-release/hotspot/_hotspot.timestamp' failed
