@@ -53,6 +53,9 @@ Java_java_io_RandomAccessFile_open(JNIEnv *env,
     int flags = 0;
     if (mode & java_io_RandomAccessFile_O_RDONLY)
         flags = O_RDONLY;
+    else if (mode & java_io_RandomAccessFile_O_RDREMOTE) // added by daegyu
+	flags = O_RDREMOTE;
+    
     else if (mode & java_io_RandomAccessFile_O_RDWR) {
         flags = O_RDWR | O_CREAT;
         if (mode & java_io_RandomAccessFile_O_SYNC)

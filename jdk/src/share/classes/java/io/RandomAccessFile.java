@@ -69,6 +69,8 @@ public class RandomAccessFile implements DataOutput, DataInput, Closeable {
     private static final int O_RDWR =   2;
     private static final int O_SYNC =   4;
     private static final int O_DSYNC =  8;
+    private static final int O_RDREMOTE =  32; // added by daegyu
+
 
     /**
      * Creates a random access file stream to read from, and optionally
@@ -201,6 +203,8 @@ public class RandomAccessFile implements DataOutput, DataInput, Closeable {
         int imode = -1;
         if (mode.equals("r"))
             imode = O_RDONLY;
+	else if (mode.equals("rr")) // added by daegyu
+	    imode = O_RDREMOTE;
         else if (mode.startsWith("rw")) {
             imode = O_RDWR;
             rw = true;
